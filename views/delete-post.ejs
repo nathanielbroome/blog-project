@@ -1,0 +1,25 @@
+<%-include("partials/header") %> 
+
+<body>
+    <div class="container">
+        <div class="post-form">
+            <h1 class="center"> <%= title %> </h1>
+
+            <p class="center">  <%= textArea %> </p>
+
+            <form class="post-form" method="POST" action="/delete-post/<%= title %>">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="title" value="<%= title %>">
+
+
+                <a style="text-decoration: none;" href="/delete-post/<%= title %>"><button class="submit-button" id="delete-post" type="submit">Delete</button></a>
+            
+
+            </form>
+
+
+        </div> 
+    </div>  
+    
+</body>  
+<%-include("partials/footer.ejs") %>

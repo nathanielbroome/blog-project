@@ -1,0 +1,46 @@
+<%- include("partials/header.ejs") %>
+
+    <div id="header">
+        <div class="img-div">
+            <a href="/new-post"><button id="header-button">New Post</button></a>
+        </div>
+    </div>
+    <div class="container">
+        <div id="home-section">
+            <h1>Home</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Sem integer vitae justo eget magna fermentum iaculis eu non. Ac odio tempor orci dapibus ultrices in iaculis nunc. Mollis aliquam ut porttitor leo a diam sollicitudin tempor id. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Dolor purus non enim praesent elementum. </p>
+        </div>
+    </div>
+    <div class="container">
+
+        <div id="blog-section" class="margin50">
+            
+            <% if(locals.blogs) { %>
+                <h2>Recent Posts</h2>                
+    
+                <% blogs.forEach((post) => { %>                    
+                    
+                    <div class="post-div">
+                        <h3><a href="/view-posts/<%= post.title %>"><%= post.title %></a></h3>
+                        
+                        <% if (post.textArea) { %>
+                            <p><%= post.textArea.substring(0, 150) + "..." %></p>
+                            <hr />
+                        <% } %>
+                        
+                        
+                    </div>
+                    
+                <% }); %>                    
+
+            <% } else { %>
+                <p>No blog posts available.</p>
+            <% } %>
+
+        </div>
+    </div>
+
+
+
+
+<%-include("partials/footer.ejs") %>
