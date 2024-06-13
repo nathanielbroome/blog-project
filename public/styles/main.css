@@ -276,3 +276,10 @@ footer {
 .margin50 {
 margin-bottom: 50px;
 }
+
+@media (max-width: 650px){
+
+    #delete {
+        margin-bottom:30px;
+    }
+}
