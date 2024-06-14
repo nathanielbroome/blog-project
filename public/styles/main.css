@@ -159,7 +159,7 @@ header {
     margin: 0;
 }
 
-.post-form {
+.post-form, .view-form {
     display: block;
     justify-content: center;
     align-items: center;
@@ -170,25 +170,18 @@ header {
     
 }
 
-.view-form {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-    margin-top: 15px;
-}
+
 
 .view-form > button {
     justify-content: center;
 }
 
-.post-form > ul {
+.view-form > ul {
     list-style: none;
     padding: 0;
 }
 
-.post-form > ul > li {
+.view-form > ul > li {
     display: inline-block;
     justify-content: space-around;
     justify-content: flex-start;
@@ -280,14 +273,11 @@ margin-bottom: 50px;
 
 #view-list-buttons {
     display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: center;
     gap: 10px;
     padding-bottom: 60px;
 }
 
-@media (max-width: 315px) {
+@media (max-width: 350px) {
     #top-nav {
         margin-right: 0;
     }
@@ -297,5 +287,9 @@ margin-bottom: 50px;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    .view-form {
+    padding: 10px;
     }
 }
