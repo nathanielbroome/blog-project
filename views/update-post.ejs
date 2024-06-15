@@ -1,20 +1,21 @@
 <%-include('partials/header') %>
 
-
-    <form class="post-form" method="POST" action="/update-post/<%= title %>">
-        <br />
-        <h1>Edit Blog Post</h1>
-        <!-- Title input -->
-        <input type="text" id="title" name="title" value="<%= title %>">
-        <br>
-
-        <!-- Text area input -->
-        <textarea id="textArea" name="textArea"><%= textArea %></textarea>
-        <br>
-
-        
-
-        <a style="text-decoration: none;"  href="/update-post/<%= title %>"><button class="submit-button">Update</button></a>
-    </form>
+    <div class="container">
+        <form class="post-form" method="POST" action="/update-post/<%= title %>">
+            <br />
+            <h1>Edit Blog Post</h1>
+            <!-- Title input -->
+            <input type="text" id="title" name="title" value="<%= title %>">
+            <br>
+    
+            <!-- Text area input -->
+            <textarea id="textArea" name="textArea"><%= textArea %></textarea>
+            <br>
+    
+            
+    
+            <a style="text-decoration: none;"  href="/update-post/<%= title %>"><button class="submit-button">Update</button></a>
+        </form>
+    </div>
 
   <%-include("partials/footer.ejs") %>
