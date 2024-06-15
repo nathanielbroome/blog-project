@@ -7,14 +7,15 @@
             <!-- Title input -->
             <input type="text" id="title" name="title" value="<%= title %>">
             <br>
-    
+
             <!-- Text area input -->
             <textarea id="textArea" name="textArea"><%= textArea %></textarea>
             <br>
-    
-            
-    
-            <a style="text-decoration: none;"  href="/update-post/<%= title %>"><button class="submit-button">Update</button></a>
+
+            <ul id="update-buttons">
+                <li><a style="text-decoration: none;" href="/"><button class="update-button" id="back-button">Back</button></a></li> 
+                <li><a style="text-decoration: none;"  href="/update-post/<%= title %>"><button class="submit-button">Update</button></a></li>
+            </ul>   
         </form>
     </div>
 
